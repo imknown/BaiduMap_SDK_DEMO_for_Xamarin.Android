@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <JavaDocPaths>JavaDocs</JavaDocPaths>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{529E1A08-F437-43C6-8B08-5736FC166E8C}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaiduMap242Bindings</RootNamespace>
+    <AssemblyName>BaiduMap242Bindings</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>
+    </TargetFrameworkVersion>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Support.v4" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additions\ItemizedOverlay.cs" />
+    <Compile Include="Additions\MKRouteAddrResult.cs" />
+    <Compile Include="Additions\CloudSearchResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Jars\AboutJars.txt" />
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="JavaDocs\package-list" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\Metadata.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+    <TransformFile Include="Transforms\EnumFields.xml">
+      <SubType>Designer</SubType>
+    </TransformFile>
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IJavaObjectEx\IJavaObjectEx.csproj">
+      <Project>{cb380599-1dcd-4495-be9d-754a9218df9a}</Project>
+      <Name>IJavaObjectEx</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\baidumapapi_v2_4_2.jar" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\locSDK_3.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JavaDocs\allclasses-frame.html" />
+    <Content Include="JavaDocs\allclasses-noframe.html" />
+    <Content Include="JavaDocs\blank.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\BMapManager.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\class-use\BMapManager.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\class-use\MKGeneralListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\class-use\NetworkListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\class-use\VersionInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\BaseCloudSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\BaseSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\BaseSearchResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\BoundSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\BaseCloudSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\BaseSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\BaseSearchResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\BoundSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\CloudListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\CloudManager.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\CloudPoiInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\CloudSearchResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\DetailSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\DetailSearchResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\LocalSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\class-use\NearbySearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\CloudListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\CloudManager.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\CloudPoiInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\CloudSearchResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\DetailSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\DetailSearchResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\LocalSearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\NearbySearchInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\cloud\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Geometry.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Graphic.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\GraphicsOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Ground.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\GroundOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\ItemizedOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\LocationData.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MapController.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MapFragment.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MapPoi.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MapView.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MapView.LayoutParams.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKEvent.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKMapStatus.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKMapStatusChangeListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKMapTouchListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKMapViewListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKOfflineMap.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKOfflineMapListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKOLSearchRecord.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MKOLUpdateElement.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MyLocationOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\MyLocationOverlay.LocationMode.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Overlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\OverlayItem.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\PoiOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\PopupClickListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\PopupOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\RouteOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\SupportMapFragment.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Symbol.Color.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Symbol.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\Symbol.Stroke.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\TextItem.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\TextOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\class-use\TransitOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Geometry.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Graphic.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\GraphicsOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Ground.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\GroundOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\ItemizedOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\LocationData.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MapController.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MapFragment.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MapPoi.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MapView.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MapView.LayoutParams.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKEvent.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKMapStatus.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKMapStatusChangeListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKMapTouchListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKMapViewListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKOfflineMap.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKOfflineMapListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKOLSearchRecord.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MKOLUpdateElement.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MyLocationOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\MyLocationOverlay.LocationMode.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Overlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\OverlayItem.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\PoiOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\PopupClickListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\PopupOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\RouteOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\SupportMapFragment.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Symbol.Color.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Symbol.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\Symbol.Stroke.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\TextItem.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\TextOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\map\TransitOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\MKGeneralListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\BaiduMapAppNotSupportNaviException.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\BaiduMapNavigation.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\class-use\BaiduMapAppNotSupportNaviException.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\class-use\BaiduMapNavigation.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\class-use\IllegalNaviArgumentException.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\class-use\NaviPara.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\IllegalNaviArgumentException.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\NaviPara.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\navi\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\NetworkListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\Panorama.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaLink.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaMarker.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaService.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaService.PanoramaServiceCallback.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaUtils.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaView.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaViewCamera.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\class-use\PanoramaViewListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\Panorama.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaLink.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaMarker.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaOverlay.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaService.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaService.PanoramaServiceCallback.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaUtils.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaView.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaViewCamera.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\panorama\PanoramaViewListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKAddrInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKBusLineResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKCityListInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKDrivingRouteResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKGeocoderAddressComponent.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKLine.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKPlanNode.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKPoiInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKPoiResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKRoute.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKRouteAddrResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKRoutePlan.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKSearch.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKSearchListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKShareUrlResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKStep.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKSuggestionInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKSuggestionResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKTransitRoutePlan.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKTransitRouteResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKWalkingRouteResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\class-use\MKWpNode.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKAddrInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKBusLineResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKCityListInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKDrivingRouteResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKGeocoderAddressComponent.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKLine.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKPlanNode.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKPoiInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKPoiResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKRoute.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKRouteAddrResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKRoutePlan.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKSearch.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKSearchListener.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKShareUrlResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKStep.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKSuggestionInfo.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKSuggestionResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKTransitRoutePlan.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKTransitRouteResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKWalkingRouteResult.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\MKWpNode.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\search\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\utils\class-use\DistanceUtil.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\utils\DistanceUtil.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\utils\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\utils\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\utils\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\utils\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\mapapi\VersionInfo.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\basestruct\class-use\GeoPoint.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\basestruct\GeoPoint.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\basestruct\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\basestruct\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\basestruct\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\basestruct\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\map\class-use\Projection.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\map\package-frame.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\map\package-summary.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\map\package-tree.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\map\package-use.html" />
+    <Content Include="JavaDocs\com\baidu\platform\comapi\map\Projection.html" />
+    <Content Include="JavaDocs\constant-values.html" />
+    <Content Include="JavaDocs\deprecated-list.html" />
+    <Content Include="JavaDocs\help-doc.html" />
+    <Content Include="JavaDocs\index-files\index-1.html" />
+    <Content Include="JavaDocs\index-files\index-10.html" />
+    <Content Include="JavaDocs\index-files\index-11.html" />
+    <Content Include="JavaDocs\index-files\index-12.html" />
+    <Content Include="JavaDocs\index-files\index-13.html" />
+    <Content Include="JavaDocs\index-files\index-14.html" />
+    <Content Include="JavaDocs\index-files\index-15.html" />
+    <Content Include="JavaDocs\index-files\index-16.html" />
+    <Content Include="JavaDocs\index-files\index-17.html" />
+    <Content Include="JavaDocs\index-files\index-18.html" />
+    <Content Include="JavaDocs\index-files\index-19.html" />
+    <Content Include="JavaDocs\index-files\index-2.html" />
+    <Content Include="JavaDocs\index-files\index-20.html" />
+    <Content Include="JavaDocs\index-files\index-21.html" />
+    <Content Include="JavaDocs\index-files\index-22.html" />
+    <Content Include="JavaDocs\index-files\index-23.html" />
+    <Content Include="JavaDocs\index-files\index-24.html" />
+    <Content Include="JavaDocs\index-files\index-25.html" />
+    <Content Include="JavaDocs\index-files\index-3.html" />
+    <Content Include="JavaDocs\index-files\index-4.html" />
+    <Content Include="JavaDocs\index-files\index-5.html" />
+    <Content Include="JavaDocs\index-files\index-6.html" />
+    <Content Include="JavaDocs\index-files\index-7.html" />
+    <Content Include="JavaDocs\index-files\index-8.html" />
+    <Content Include="JavaDocs\index-files\index-9.html" />
+    <Content Include="JavaDocs\index.html" />
+    <Content Include="JavaDocs\overview-frame.html" />
+    <Content Include="JavaDocs\overview-summary.html" />
+    <Content Include="JavaDocs\overview-tree.html" />
+    <Content Include="JavaDocs\resources\background.gif" />
+    <Content Include="JavaDocs\resources\tab.gif" />
+    <Content Include="JavaDocs\resources\titlebar.gif" />
+    <Content Include="JavaDocs\resources\titlebar_end.gif" />
+    <Content Include="JavaDocs\serialized-form.html" />
+    <Content Include="JavaDocs\stylesheet.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

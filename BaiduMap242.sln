@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiduMap242", "BaiduMap242\BaiduMap242.csproj", "{D2EF722E-E24A-4484-A4B7-C6916F9120D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaiduMap242Binding", "BaiduMap242Binding\BaiduMap242Binding.csproj", "{529E1A08-F437-43C6-8B08-5736FC166E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IJavaObjectEx", "IJavaObjectEx\IJavaObjectEx.csproj", "{CB380599-1DCD-4495-BE9D-754A9218DF9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2EF722E-E24A-4484-A4B7-C6916F9120D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EF722E-E24A-4484-A4B7-C6916F9120D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EF722E-E24A-4484-A4B7-C6916F9120D5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D2EF722E-E24A-4484-A4B7-C6916F9120D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EF722E-E24A-4484-A4B7-C6916F9120D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EF722E-E24A-4484-A4B7-C6916F9120D5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{529E1A08-F437-43C6-8B08-5736FC166E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529E1A08-F437-43C6-8B08-5736FC166E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529E1A08-F437-43C6-8B08-5736FC166E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529E1A08-F437-43C6-8B08-5736FC166E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB380599-1DCD-4495-BE9D-754A9218DF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB380599-1DCD-4495-BE9D-754A9218DF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB380599-1DCD-4495-BE9D-754A9218DF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB380599-1DCD-4495-BE9D-754A9218DF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

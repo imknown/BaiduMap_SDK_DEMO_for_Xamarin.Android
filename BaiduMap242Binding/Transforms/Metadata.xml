@@ -1,0 +1,295 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+
+  <!-- 还原访问修饰符 -->
+  <attr path="/api/package[@name='com.baidu.mapapi.map']/class[@name='LocationData']/method[@name='clone' and count(parameter)=0]" name="visibility">protected new</attr>
+  <attr path="/api/package[@name='com.baidu.mapapi.map']/class[@name='MapView.LayoutParams']" name="visibility">new</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='o']/method[@name='a' and count(parameter)=0]" name="visibility">protected new</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='o']/method[@name='a' and count(parameter)=1]" name="visibility">protected new</attr>
+
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='a']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='byte']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='case']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='char']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='do']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='else']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='for']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='goto']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='if']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='int']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='long']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='new']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='try']" name="visibility">private</attr>
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='LocationClientOption']/field[@name='void']" name="visibility">private</attr>
+
+  <!-- 包名(命名空间)不能与类名相同, 其中的X, 表示的是Xamarin ☺ -->
+  <attr path="/api/package[@name='com.baidu.mapapi.panorama']" name="managedName">Com.Baidu.Mapapi.PanoramaX</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.a']" name="managedName">Com.Baidu.Platform.Comapi.Map.AX</attr>
+
+
+  <!-- 解决 属性访问器重名 等冲突
+  private 的Java 的类属性(类成员变量)在 C#中叫做字段. 例如 private com.hostname.CertainClass abc;
+  在Java中, 要想跨包访问private的abc, 必须设置公开方法, 即: public int getAbc(), public void setAbc() 或者二者.
+  C#的属性访问器与其很相似, 例如: Abc { get; set; }.
+  
+  所以如果给一个public的def设置了公开方法, 其实我觉得有一些多此一举, 当然, 这也是不规范的, 不安全的.
+  Xamarin 同时会生成一个属性访问器(public virtual string Def).
+  但是 Xamarin 找到了Java的getDef()或者setDef(), 
+  会反向生成字段 static IntPtr id_getDef 、static IntPtr id_setDef_Lcom_hostname_CertainClass_ 及其属性访问器(Def)
+  于是 两个重名的访问器就出现了.
+  
+  注: 此方法同样适用于Java 的类属性 使用了 C#关键字或者保留字 的问题. 
+  例如 在Java 中, int namespace; 没有语法错误, 但是如果直接拿到C#中, 后果可想而知. -->
+  <attr path="/api/package[@name='com.baidu.mapapi']/class[@name='VersionInfo']/field[@name='VERSION_INFO']" name="managedName">VERSION_INFO</attr>
+  <attr path="/api/package[@name='com.baidu.mapapi']/class[@name='VersionInfo']/field[@name='VERSION_DESC']" name="managedName">VERSION_DESC</attr>
+
+  <attr path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKSearch']/field[@name='POI_DETAIL_SEARCH']" name="managedName">POI_DETAIL_SEARCH</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']/field[@name='a']" name="managedName">aVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']/field[@name='b']" name="managedName">bVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']/field[@name='c']" name="managedName">cVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']/field[@name='d']" name="managedName">dVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']/field[@name='h']" name="managedName">hVar</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='e']/field[@name='a']" name="managedName">aVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='e']/field[@name='b']" name="managedName">bVar</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='MapRenderer']/field[@name='a']" name="managedName">aVar</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='n.a']/field[@name='a']" name="managedName">aVar</attr>
+
+  <!-- 真实类型: SDKLayerBase -->
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='m']/field[@name='a']" name="managedName">aVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='m']/field[@name='b']" name="managedName">bVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='m']/field[@name='c']" name="managedName">cVar</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='b']/field[@name='a']" name="managedName">aVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='b']/field[@name='b']" name="managedName">bVar</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='c']/field[@name='a']" name="managedName">aVar</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='c']/field[@name='b']" name="managedName">bVar</attr>
+
+
+  <!-- public List<CloudPoiInfo> poiList 不会生成泛型, 所以移除, 手动通过 Additions/CloudSearchResult.cs 绑定 -->
+  <remove-node path="/api/package[@name='com.baidu.mapapi.cloud']/class[@name='CloudSearchResult']/field[@name='poiList']"/>
+
+  <!-- public ArrayList<MKPoiInfo> mStartPoiList 等 不会生成泛型, 所以移除, 手动通过 Additions/MKRouteAddrResult.cs 绑定 -->
+  <remove-node path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKRouteAddrResult']/field[@name='mStartPoiList']"/>
+  <remove-node path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKRouteAddrResult']/field[@name='mEndPoiList']"/>
+  <remove-node path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKRouteAddrResult']/field[@name='mWpPoiList']"/>
+  <remove-node path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKRouteAddrResult']/field[@name='mStartCityList']"/>
+  <remove-node path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKRouteAddrResult']/field[@name='mEndCityList']"/>
+  <remove-node path="/api/package[@name='com.baidu.mapapi.search']/class[@name='MKRouteAddrResult']/field[@name='mWpCityList']"/>
+
+
+  <!-- 不要轻易移除 -->
+  <!--<remove-node path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[string-length (@name) = 1 and @name!='a' and @name!='k' and @name!='m' and @name!='n' and @name!='o' and @name!='p']" />-->
+
+
+  <!-- 重命名类名 -->
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.a']/interface[@name='a']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.a']/class[@name='e']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='a']" name="managedName">aClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/interface[@name='b']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/interface[@name='b']" name="managedName">bInterface</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/interface[@name='c']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='d']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='d']" name="managedName">dClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='e']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='e']" name="managedName">eClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='e.a']" name="obfuscated">false</attr>
+  <!-- 不能这么写 <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/enum[@name='e.a']" name="obfuscated">false</attr> -->
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='e.a']" name="managedName">aEnum</attr>
+
+  <!-- 暂时不需要 <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='f']" name="obfuscated">false</attr> -->
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='g']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='g']" name="managedName">gClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='h']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/interface[@name='h.a']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/interface[@name='i']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='j']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='j']" name="managedName">jClass</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='j.a']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='j.a']" name="managedName">aClass</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='j.b']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='j.b']" name="managedName">bClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='k']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='k']" name="managedName">Overlay</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='l']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='m']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='m']" name="managedName">SDKLayerBase</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='n']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='n']" name="managedName">SDKLayerDataModelBase</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='n.a']" name="obfuscated">false</attr>
+  <!-- 不能这么写 <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/enum[@name='n.a']" name="obfuscated">false</attr> -->
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='o']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='o']" name="managedName">SDKLayerDataModelImageBase</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='p']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='p']" name="managedName">SDKLayerImageBase</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.map.base']/interface[@name='MapRenderer.a']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comjni.map.basemap']/class[@name='a']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comjni.map.basemap']/interface[@name='b']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='a']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='a']" name="managedName">aClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='b']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.platform.comapi.basestruct']/class[@name='c']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.mapapi.utils']/class[@name='PermissionCheck.b']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.mapapi.utils']/class[@name='PermissionCheck.b']" name="managedName">bClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.mapapi.utils']/interface[@name='PermissionCheck.c']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.vi']/class[@name='c']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.vi']/class[@name='c']" name="managedName">cClass</attr>
+
+  <attr path="/api/package[@name='com.baidu.mapapi.search']/class[@name='a']" name="obfuscated">false</attr>
+  <attr path="/api/package[@name='com.baidu.mapapi.search']/interface[@name='a.a']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='BDLocation.a']" name="obfuscated">false</attr>
+
+  <attr path="/api/package[@name='com.baidu.location']/class[@name='i']" name="obfuscated">false</attr>
+
+
+  <!-- 自动生成器漏掉的方法? 实现C#接口的方法, 原因可能是因为, Java接口和C#接口还是有一定区别的 -->
+  <add-node path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay']">
+    <method
+      abstract="false" deprecated="not deprecated"
+      final="false" name="Compare" native="false" return="int"
+      static="false" synchronized="false" visibility="public">
+      <parameter name="p0" type="java.lang.Object"></parameter>
+      <parameter name="p1" type="java.lang.Object"></parameter>
+    </method>
+  </add-node>
+
+  <add-node path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay']">
+    <method
+      abstract="false" deprecated="not deprecated"
+      final="false" name="Equals" native="false" return="bool"
+      static="false" synchronized="false" visibility="public">
+      <parameter name="p0" type="java.lang.Object"></parameter>
+    </method>
+  </add-node>
+
+  <add-node path="/api/package[@name='com.baidu.mapapi.cloud']/class[@name='CloudSearchResult']">
+    <method abstract="false" deprecated="not deprecated"
+      final="false" name="A" native="false" return="void"
+      static="false" synchronized="false" visibility="internal">
+      <parameter name="paramJSONObject" type="org.json.JSONObject"></parameter>
+    </method>
+  </add-node>
+
+  <!-- 类的泛型没有生成, 通过 Additions/ItemizedOverlay.cs 手动管理 -->
+  <!--<remove-node path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay']" />-->
+
+
+  <!--Metadata.xml XPath class reference: path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='p']"-->
+  <!--<remove-node path="/api/package[@name='com.baidu.platform.comapi.map.base']/class[@name='SDKLayerImageBase']/method[@name='SDKLayerImageBase' and count(parameter)=2 and parameter[1][@type='System.IntPtr'] and parameter[2][@type='Android.Runtime.JniHandleOwnership']]" />-->
+
+
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay']" ></attr>-->
+  <!--<add-node path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay']">
+    <implements name="java.util.Collection" name-generic-aware="java.util.Collection&lt;T&gt;" />
+  </add-node>-->
+
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.map']/class[@name='SupportMapFragment' and @extends='android.support.v4.app.Fragment']" name="extends">
+    android.app.Fragment
+  </attr>-->
+
+
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay' and @extends='com.baidu.platform.comapi.map.base.p']" name="extends">
+    com.baidu.platform.comapi.map.base.p
+  </attr>-->
+
+  <!--<add-node path="/api/package[@name='com.baidu.mapapi.cloud']">
+    <class abstract="false" deprecated="not deprecated"
+      final="false" native="false" return="void"
+      static="false" synchronized="false" visibility="public"
+      name="ItemizedOverlay" name-generic-aware="java.util.Map"
+      extends="java.util.ArrayList" extends-generic-aware="java.util.ArrayList&lt;T&gt;" />
+  </add-node>-->
+
+
+  <!-- 自动生成器漏掉的 类/接口/枚举 等? -->
+  <!--<add-node
+      path="/api/package[@name='com.baidu.platform.comapi.map.base']">
+    <interface
+      abstract="true" deprecated="not deprecated" extends="java.util.ArrayList"
+      extends-generic-aware="java.lang.Object" final="false" name="h"
+      static="true" visibility="public">
+    </interface>
+  </add-node>-->
+
+  <!--<add-node
+      path="/api/package[@name='com.baidu.mapapi.search']">
+    <interface
+      abstract="true" deprecated="not deprecated"
+      final="false" name="a.a"
+      static="true" visibility="public">
+    </interface>
+  </add-node>-->
+
+
+  <!--<add-node path="/api/package[@name='oauth.signpost.http']/class[implements[@name='java.util.Map']]">
+    <method abstract="false" deprecated="not deprecated"
+      final="false" name="get" native="false" return="java.Lang.Object"
+      static="false" synchronized="false" visibility="public">
+      <parameter name="key" type="java.lang.Object"></parameter>
+    </method>
+  </add-node>
+
+  <attr path="/api/package[@name='android']/class[@name='Manifest']" name="name">NewName</attr>-->
+
+
+  <!--<attr path="/api/package[@name='oauth.signpost.http']/class[@name='HttpParameters']/method[@name='get']" name="managedReturn">Java.Lang.Object</attr>-->
+
+  <!--// Metadata.xml XPath field reference: path="/api/package[@name='com.baidu.mapapi.cloud']/class[@name='CloudSearchResult']/field[@name='poiList']"-->
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.cloud']/class/field[@type='java.util.List']" name="type">java.util.List</attr>-->
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.cloud']/class/field[@name='poiList']" name="type">java.util.List</attr>-->
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.cloud']/class/field[@type-generic-aware='java.util.List&lt;com.baidu.mapapi.cloud.CloudPoiInfo&gt;']" name="type">System.Collections.Generic.IList&lt;com.baidu.mapapi.cloud.CloudPoiInfo&gt;</attr>-->
+
+  <!--System.Collections.Generic.IList<global::Com.Baidu.Mapapi.Cloud.CloudPoiInfo> &lt;global::Com.Baidu.Mapapi.Cloud.CloudPoiInfo&gt; -->
+  <!--<attr path="/api/package[@name='com.baidu.mapapi.cloud']/class[@name='CloudSearchResult']/field[@name='poiList']" name="type">System.Collections.Generic.List</attr>-->
+
+  <!--<add-node path="/api/namespace/object[@cname='GtkContainer']">
+    <implements>
+      <interface name="IEnumerable" />
+    </implements>
+  </add-node>-->
+
+
+  <!--<remove-node path="/api/package[contains(@name, '.internal')]" />-->
+  <!--<remove-node path="/api/package[@name='a']" />-->
+  <!--<remove-node path="/api/package[@name='com.baidu.mapapi.map']/class[@name='ItemizedOverlay']/method[@name='compare']" />-->
+
+</metadata>
