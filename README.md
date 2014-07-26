@@ -1,4 +1,4 @@
-#BaiduMap_SDK_DEMO_for_Xamarin.Android_by_imknown
+#BaiduMap_SDK_DEMO_for_Xamarin.Android
 
 国内建议放访问这个, 更新快, 速度也快.
 [https://git.oschina.net/imknown/BaiduMap_SDK_DEMO_for_Xamarin.Android](https://git.oschina.net/imknown/BaiduMap_SDK_DEMO_for_Xamarin.Android)<br />
