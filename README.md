@@ -1,5 +1,7 @@
 #BaiduMap_SDK_DEMO_for_Xamarin.Android
 
+#3.0.0已经开发完成, 暂时没有上传到这里, 但是OSChina已经提交完成. 3.1.1尚未完成.
+
 国内建议放访问这个, 更新快, 速度也快.
 [https://git.oschina.net/imknown/BaiduMap_SDK_DEMO_for_Xamarin.Android](https://git.oschina.net/imknown/BaiduMap_SDK_DEMO_for_Xamarin.Android)<br />
 
